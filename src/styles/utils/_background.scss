@@ -1,0 +1,25 @@
+@import '../theme-config.scss';
+
+.bg--warning {
+    background-color: $warning;
+}
+
+.bg--primary {
+    background-color: $primary;
+}
+
+.bg--danger {
+    background-color: $danger;
+}
+
+.bg--white {
+    background-color: $white;
+}
+
+.text--white {
+    color: $white;
+}
+
+.text--black {
+    color: $black;
+}

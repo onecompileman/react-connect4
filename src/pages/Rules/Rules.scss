@@ -1,0 +1,78 @@
+@import 'styles/config.scss';
+
+.rules {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $bg1;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &__title {
+        font-size: 48px;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    &__description {
+        line-height: 26px;
+        display: flex;
+        flex-direction: column;
+
+        b { 
+            font-weight: 500;
+            color: $bg1;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        ol  {
+            margin-top: 0;
+            padding-left: 20px;
+            li::marker {
+                font-weight: bold;
+            }
+        }
+    }
+
+
+    &__close-btn {
+        @include border-style(2px, 6px, 100%);
+
+        background-color: $danger;
+        color: $white;
+        font-size: 24px;
+        transition: 0.1s linear;
+        height: 42px;
+        width: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: -25px;
+        margin-left: auto;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+    &__menu-container {
+        @include border-style(2px, 8px, 20px);
+
+        max-width: 450px;
+        margin: 20px;
+        padding: 20px;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    
+
+}

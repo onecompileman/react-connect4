@@ -1,0 +1,36 @@
+@import 'styles/config.scss';
+
+.home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $bg2;
+    align-items: center;
+    justify-content: center;
+
+    &__menu-container {
+        @include border-style(2px, 8px, 20px);
+
+        max-width: 450px;
+        margin: 20px;
+        padding: 20px;
+        padding-top: 60px;
+        background-color: $bg1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: -webkit-fill-available;
+    }
+
+    &__menu-items-container {
+        width: 100%;
+        position: relative;
+        margin-top: 60px;
+        div {
+            margin-top: 10px;
+        }
+    }
+
+}

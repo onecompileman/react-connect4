@@ -1,0 +1,17 @@
+@import '../styles/config.scss';
+
+.board-col {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 8);
+    position: relative;
+
+    div {
+        @include border-style(3px, 10px, 100%, true);
+
+        padding: 30%;
+        box-sizing: border-box;
+        background-color: $bg1;
+        margin: 13%;
+    }
+}

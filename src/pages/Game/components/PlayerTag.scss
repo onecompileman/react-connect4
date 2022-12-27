@@ -1,0 +1,59 @@
+@import 'styles/config.scss';
+
+.player-tag {
+    @include border-style(3px, 12px, 25px);
+
+    width: 140px;
+    height: 160px;
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    span {
+        font-size: 24px;
+    }
+
+    b {
+        font-size: 36px;
+    }
+
+    &__disc {
+        @include border-style(2px, 3px, 100%);
+
+        height: 48px;
+        width: 48px;
+        position: absolute;
+        top: -24px;
+        margin-left: auto;
+
+        &--red {
+            background-color: $danger;
+        }
+
+        &--yellow {
+            background-color: $warning;
+        }
+    }
+
+    @media only screen and (max-width: 992px) {
+        flex-direction: row;
+        height: 100px;
+        width: 40%;
+        max-width:300px;
+        margin: 2%;
+
+        &__disc {
+            top: auto;
+            left: -24px;
+        } 
+
+        b {
+            margin-left: 20px;
+        }
+    }
+}
+

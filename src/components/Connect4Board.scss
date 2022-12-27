@@ -1,0 +1,15 @@
+@import '../styles/config.scss';
+
+.connect-board {
+    @include border-style(3px, 12px, 30px);
+
+    max-width: 650px;
+    margin: 20px;
+    width: 100%;
+    // padding: 20px;
+    background-color: $white;
+    display: flex;
+    position: relative;
+    padding-bottom: 30px;
+    z-index: 2;
+}

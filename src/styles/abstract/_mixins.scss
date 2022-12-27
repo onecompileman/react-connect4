@@ -1,0 +1,9 @@
+@mixin border-style($initial: 2px, $bottom: 8px, $radius: 100%, $isTop: false) {
+    border-radius: $radius;
+    border: $initial solid $black;
+    @if ($isTop) {
+        border-top-width: $bottom;
+    } @else {
+        border-bottom-width: $bottom;
+    }
+}

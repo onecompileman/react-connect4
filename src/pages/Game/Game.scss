@@ -1,0 +1,45 @@
+@import 'styles/config.scss';
+
+.game {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $bg1;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: $bg2;
+        width: 100%;
+        border-top-left-radius: 60px;
+        border-top-right-radius: 60px;
+        height: 25vh;
+        bottom: 0;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+
+        @media only screen and (max-width: 992px) {
+            .player-tag:nth-child(1) {
+                order: 1;
+            }
+    
+            .player-tag:nth-child(2) {
+                order: 2;
+            }
+    
+            .connect-board {
+                order: 3;
+            }
+        }
+
+     
+    }
+}
