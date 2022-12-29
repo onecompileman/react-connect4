@@ -3,15 +3,60 @@
 .board-col {
     display: flex;
     flex-direction: column;
-    width: calc(100% / 8);
+    width: calc(100% / 7);
     position: relative;
 
-    div {
+    &:hover {
+        .board-col__marker {
+            opacity: 1;
+        }
+    }
+
+    &__marker {
+        position: absolute; 
+        top: -5vh;
+        left: 26%;
+        opacity: 0;
+        transition: 0.2s linear;
+    }
+
+    &__disc-wrapper {
         @include border-style(3px, 10px, 100%, true);
 
         padding: 30%;
         box-sizing: border-box;
         background-color: $bg1;
         margin: 13%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (max-width: 992px) {
+            @include border-style(3px, 7px, 100%, true);
+        }
+    }
+
+    &__disc {
+        @include border-style(3px, 6px, 100%, true);
+
+        box-sizing: border-box;
+        padding: 30%;
+        position: absolute;
+        border-color: rgba(0,0,0,0.6);
+        top: -7vh;
+        transition: top 0.3s linear;
+        background-color: $danger;
+        opacity: 0;
+
+
+        &--red {
+            background-color: $danger;
+        }
+
+        &--yellow {
+            background-color: $warning;
+        }
+
+       
     }
 }

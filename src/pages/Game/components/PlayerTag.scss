@@ -41,18 +41,57 @@
 
     @media only screen and (max-width: 992px) {
         flex-direction: row;
-        height: 100px;
+        height: 80px;
         width: 40%;
         max-width:300px;
         margin: 2%;
 
+        span {
+            font-size: 18px;
+        }
+    
         &__disc {
             top: auto;
-            left: -24px;
+            left: -18px;
         } 
+
+        &__disc {
+            height: 36px;
+            width: 36px;
+
+        }
 
         b {
             margin-left: 20px;
+            font-size: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        flex-direction: row;
+        height: 60px;
+        width: 40%;
+        max-width:300px;
+        margin: 2%;
+
+        span {
+            font-size: 14px;
+        }
+    
+        &__disc {
+            top: auto;
+            left: -16px;
+        } 
+
+        &__disc {
+            height: 32px;
+            width: 32px;
+
+        }
+
+        b {
+            margin-left: 20px;
+            font-size: 28px;
         }
     }
 }

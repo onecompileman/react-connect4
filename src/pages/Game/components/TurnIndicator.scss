@@ -1,0 +1,45 @@
+@import 'styles/config.scss';
+
+.turn-indicator {
+    height: 17vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+    img {
+        height: 100%;
+    }
+
+    div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    span {
+        margin-top: 20px;
+        font-size: 1.125rem;
+        color: $white;
+    }
+
+    b {
+        margin-top: 5px;
+        font-size: 2.625rem;
+        color: $white;
+    }
+
+@media only screen and (max-width: 992px) {
+    span {
+        font-size: 0.8rem;
+    }
+
+    b {
+        margin-top: 0;
+        font-size: 2.425rem;
+    }
+}
+}

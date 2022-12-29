@@ -25,6 +25,7 @@
         align-items: center;
         flex-wrap: wrap;
         width: 100%;
+        position: relative;
 
         @media only screen and (max-width: 992px) {
             .player-tag:nth-child(1) {
@@ -42,4 +43,33 @@
 
      
     }
+
+    &__button {
+        background-color: $bg2;
+        color: $white;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 650px;
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__turn-indicator-wrapper {
+        position: absolute;
+        bottom: -10vh;
+        left: auto;
+        z-index: 2;
+    }
+
+
+   
 }
