@@ -4,7 +4,6 @@ import './BoardCol.scss';
 import markerRed from 'assets/images/marker-red.svg';
 import markerYellow from 'assets/images/marker-yellow.svg';
 import { DiscType } from 'constants/DiscType';
-import { debounce } from 'utils/debounce';
 
 type BoardColProp = {
     colIndex: number;
