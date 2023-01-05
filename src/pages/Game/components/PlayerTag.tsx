@@ -1,3 +1,4 @@
+import { DiscType } from 'constants/DiscType';
 import { PlayerType } from 'constants/PlayerType';
 import React from 'react';
 import './PlayerTag.scss';
@@ -5,6 +6,7 @@ import './PlayerTag.scss';
 type GameProp = {
     playerScore: number;
     playerType: PlayerType;
+    discType: DiscType;
 };
 
 function PlayerTag(props: GameProp) {
@@ -12,7 +14,7 @@ function PlayerTag(props: GameProp) {
   const playerNames = ['CPU', 'PLAYER 1', 'PLAYER 2'];
   const playerName = playerNames[props.playerType];
 
-  const playerClassName = props.playerType === PlayerType.PLAYER_1 ? 'red': 'yellow';
+  const playerClassName = props.discType === DiscType.RED ? 'red': 'yellow';
 
   return (
     <div className="player-tag">

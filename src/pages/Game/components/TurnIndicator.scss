@@ -1,7 +1,7 @@
 @import 'styles/config.scss';
 
 .turn-indicator {
-    height: 17vh;
+    height: 14vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -22,24 +22,24 @@
 
     span {
         margin-top: 20px;
-        font-size: 1.125rem;
+        font-size: 0.8rem;
         color: $white;
     }
 
     b {
         margin-top: 5px;
-        font-size: 2.625rem;
+        font-size: 2.1rem;
         color: $white;
     }
 
 @media only screen and (max-width: 992px) {
     span {
-        font-size: 0.8rem;
+        font-size: 0.5rem;
     }
 
     b {
         margin-top: 0;
-        font-size: 2.425rem;
+        font-size: 1.8rem;
     }
 }
 }

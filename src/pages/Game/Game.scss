@@ -6,7 +6,21 @@
     min-height: 100vh;
     background-color: $bg1;
     align-items: center;
-    justify-content: center;
+
+    &__win-banner {
+        @include border-style(3px, 12px, 25px);
+
+        width: 200px;
+        height: 80px;
+        background-color: $white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        z-index: 10;
+        font-size: 20px;
+        position: absolute;
+    }
 
     &::after {
         content: '';
@@ -57,7 +71,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 650px;
+        max-width: 500px;
         width: 100%;
         padding: 20px;
         margin-bottom: 20px;
@@ -65,7 +79,7 @@
 
     &__turn-indicator-wrapper {
         position: absolute;
-        bottom: -10vh;
+        bottom: -5vh;
         left: auto;
         z-index: 2;
     }
