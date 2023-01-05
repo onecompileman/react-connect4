@@ -90,6 +90,7 @@ function Game() {
 
  const startNewGame = () => {
   setCurrentDiscType(DiscType.RED);
+
   setThisPlayerDiscType(thisPlayerDiscTypeRef.current === DiscType.RED ? DiscType.YELLOW : DiscType.RED);
   setEnemyPlayerDiscType(enemyPlayerDiscTypeRef.current === DiscType.RED ? DiscType.YELLOW : DiscType.RED);
   setCurrentPlayerName(thisPlayerDiscTypeRef.current === DiscType.RED ? thisPlayerName : enemyPlayerName);
@@ -166,7 +167,7 @@ function Game() {
            { showWinBanner ? <div className="game__win-banner">
             {winnerName} WINS!
             </div> : ''} 
-           <div  className="game__turn-indicator-wrapper">
+           <div className="game__turn-indicator-wrapper">
                 <TurnIndicator 
                     discType={currentDiscType} 
                     seconds={playerTimer} 

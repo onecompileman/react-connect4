@@ -2,7 +2,6 @@ import { DiscType } from 'constants/DiscType';
 import { GameConclusionType } from 'constants/GameConclusionType';
 import React, { useEffect } from 'react';
 import useState from 'react-usestateref';
-import { createEmptyConnect4Board } from 'utils/createEmptyConnect4Board';
 import { selectBestMove } from 'utils/selectBestMove';
 import BoardCol from './BoardCol';
 import './Connect4Board.scss';
@@ -162,7 +161,6 @@ function Connect4Board(props: Connect4BoardProp) {
 
     for (let i = 0; i < reverseDiagonalIndexes.length;i++) {
       const diagonalStr = getDiagonalString(reverseDiagonalIndexes[i][0], reverseDiagonalIndexes[i][1], true);
-      console.log(diagonalStr);
       
       if (diagonalStr.includes(discType.toString().repeat(4))) {
         return true;

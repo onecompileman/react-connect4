@@ -49,7 +49,6 @@ function BoardCol(props: BoardColProp) {
 
       if (colIndex !== -1) {
           colDataCopy[colIndex] = discTypeTurn;
-          console.log(colDataCopy)
           props.onDiscPlaced(colDataCopy);
       }
     }
