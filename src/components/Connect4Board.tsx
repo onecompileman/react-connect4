@@ -2,6 +2,7 @@ import { DiscType } from 'constants/DiscType';
 import { GameConclusionType } from 'constants/GameConclusionType';
 import React, { useEffect } from 'react';
 import useState from 'react-usestateref';
+import { getBestMoveChatGPT } from 'utils/getBestMoveChatGPT';
 import { selectBestMove } from 'utils/selectBestMove';
 import BoardCol from './BoardCol';
 import './Connect4Board.scss';
@@ -40,7 +41,7 @@ function Connect4Board(props: Connect4BoardProp) {
   }, [props.currentPlayerDiscType]);
 
   useEffect(() => {
-    return () => randomBestMove(discTypeTurnRef.current);
+    return () =>{  randomBestMove(discTypeTurnRef.current) };
   }, [props.triggerRandomMove]);
 
   const onBoardColChangedHandler = (colIndex: number) => {
@@ -80,9 +81,10 @@ function Connect4Board(props: Connect4BoardProp) {
     }
   }
 
-  const randomBestMove = (discType: DiscType) => {
+  const randomBestMove = async (discType: DiscType) => {
+    getBestMoveChatGPT(boardRef.current, discType);
     const boardCopy = boardRef.current;
-    const aiColMove = selectBestMove(boardRef.current, discType);
+    const aiColMove = await selectBestMove(boardRef.current, discType);
 
     if (aiColMove !== null) {
       for (let r = 5; r >= 0;r--) {
